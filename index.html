@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carto Test #1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="data-table-wrapper">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th class="id">ID</th>
+                    <th class="geo">Geo</th>
+                    <th class="address">Address</th>
+                    <th class="assesland">Assesland</th>
+                </tr>
+            </thead>
+            <tbody id="data-table-body">
+            </tbody>
+        </table>
+        <div id="table-footer">
+
+        </div>
+    </div>
+    <div id="canvas-wrap">
+        <canvas id="canvas"></canvas>
+        <div id="canvas-buttons">
+            <div class="control-button" id="button-zoomin">+</div>
+            <div class="control-button" id="button-zoomout">-</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="models.js"></script>
+    <script type="text/javascript" src="ux.js"></script>
+    <script type="text/javascript" src="lib.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript">
+        // Run, Init canvas
+        let canvas = document.getElementById('canvas');
+        setCanvasProps(canvas);
+
+        //... and context
+        let ctx = canvas.getContext('2d');
+        setContextProps(ctx);
+
+        let baseUrl = 'https://rambo-test.carto.com:443/api/v2/sql';
+        let map = new Map(baseUrl, canvas, ctx);
+        map.load();
+    </script>
+</body>
+</html>

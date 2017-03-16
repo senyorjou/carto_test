@@ -1,0 +1,63 @@
+/* TABLE                */
+
+#data-table-wrapper {
+    float: left;
+    margin: 10px;
+    width: 600px;
+}
+
+#data-table {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+
+#data-table .id {
+    width: 80px;
+}
+#data-table .geo {
+    width: 200px;
+}
+#data-table .address {
+    width: 250px;
+}
+#data-table .assesland {
+    width: 100px;
+}
+
+
+/* CANVAS               */
+#canvas-wrap {
+    position: relative;
+    float: left;
+}
+
+#canvas {
+    border: 4px double black;
+    cursor: crosshair;
+}
+
+#canvas-buttons {
+    top: 14px;
+    left: 10px;
+    position: absolute;
+    width: 40px;
+}
+
+.control-button {
+    background-color: #dadada;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    text-align: center;
+
+}
+#button-zoomin {
+    border-bottom: 0px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+#button-zoomout {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
